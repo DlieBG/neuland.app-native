@@ -235,11 +235,11 @@ export function formatISOTime(date: Date | undefined): string {
  * @returns {string}
  */
 export function getMonday(date: Date): Date {
-	const newDate = new Date(date)
-	const day = newDate.getDay()
-	newDate.setHours(0, 0, 0, 0)
-	newDate.setDate(newDate.getDate() - day + (day === 0 ? -6 : 1))
-	return date
+        const newDate = new Date(date)
+        const day = newDate.getDay()
+        newDate.setHours(0, 0, 0, 0)
+        newDate.setDate(newDate.getDate() - day + (day === 0 ? -6 : 1))
+        return newDate
 }
 
 /**
